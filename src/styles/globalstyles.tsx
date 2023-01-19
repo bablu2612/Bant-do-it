@@ -289,7 +289,7 @@ a{
 }
 .third_section{
   >div {
-    background: var(--orange);
+    background: var(--purple);
     display: inline-flex;
     max-width: 100px;
     border-radius: 5px;

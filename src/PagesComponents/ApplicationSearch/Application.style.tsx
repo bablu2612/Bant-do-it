@@ -24,14 +24,14 @@ const MemberSearchStyles = styled.div`
         font-family: var(--common-font);
         margin-bottom: 20px;
         color: var(--purple);
-        padding: 40px 40px 20px;
+        padding: 10px 20px;
         border-bottom: 1px solid #ddd;
         position: relative;
          &:before {
           content: "";
           position: absolute;
           left: 0;
-          top: calc(50% + 8px);
+          top: calc(50%);
           transform: translateY(-50%);
           width: 2px;
           height: 30px;
