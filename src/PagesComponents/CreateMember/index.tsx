@@ -39,7 +39,7 @@ const CreateMemberComponent = () => {
     <CreateMemberSearchStyles>
       <Box component="main" className={styles.main} id="wrapper">
         <Box className="form-bg">
-          <img src="/Images/pattern.webp" className="bg-pattern" />
+          <img src="/images/pattern.webp" className="bg-pattern" />
           <Box className="box-form">
             <Box>
               <h2 className="">View Applications</h2>

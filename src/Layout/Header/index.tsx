@@ -22,7 +22,7 @@ export default function Header({ setIsActive }: any) {
             <Box className="col-md-4 col-lg-3 col-xl-2">
               <Box className="logo-sec">
                 <a className="logo animated fadeIn" href="#">
-                  <img src="./Images/Logoold.png" />
+                  <img src="./images/Logoold.png" />
                 </a>
                 <a
                   className="app-sidebar__toggle"

@@ -8,7 +8,6 @@ import {
   SelectChangeEvent,
 } from "@mui/material";
 import styles from "@/styles/Home.module.css";
-import LayoutWithLogin from "@/Layout";
 import ApplicationSearchStyles from "./Application.style";
 import { applicationStatus, applicationType } from "./Application.constant";
 import ApplicationTable from "./ApplicationTable";
