@@ -76,7 +76,8 @@ const MemberSearchComponent = () => {
     <LayoutWithLogin>
       <MemberSearchStyles>
         {search ? (
-          <Box component="main" id="wrapper">
+          // <Box component="main" id="wrapper">
+          <>
             <div className="dash">Member Search</div>
             <Box className="form-bg">
               <img src="/Images/pattern.webp" className="bg-pattern" />
@@ -219,12 +220,13 @@ const MemberSearchComponent = () => {
                 </Box>
               </Box>
             </Box>
-          </Box>
+            {/* // </Box> */}
+          </>
         ) : (
           <MemberTable />
         )}
       </MemberSearchStyles>
-    </LayoutWithLogin>
+    </LayoutWithLogin >
   );
 };
 

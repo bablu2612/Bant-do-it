@@ -3,7 +3,10 @@ import MemberSearchComponent from "@/PagesComponents/MemberSearch";
 import React from "react";
 
 const MemberSearch = () => {
-  return <MemberSearchComponent />;
+  return (
+  
+    <MemberSearchComponent />
+  );
 };
 
 export default withAuth(MemberSearch);

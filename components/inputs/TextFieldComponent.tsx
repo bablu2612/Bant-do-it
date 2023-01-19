@@ -1,48 +1,37 @@
-import { Box, FormHelperText, InputLabel, TextField } from "@mui/material";
-import * as React from "react";
+import { Box, InputLabel, TextField } from "@mui/material";
+import * as React from 'react'
 import styled from "styled-components";
 interface ITextField {
-  errors: string;
-  name: string;
-  label?: string;
-  id?: string;
-  onChange: () => void;
-  onBlur?: () => void;
+    error?: boolean;
+    errorText?: string | undefined | boolean;
+    name: string;
+    label?: string;
+    id?: string;
+    onChange: (event: any) => void;
+    onBlur?: (event: any) => void;
 }
 
-const TextComponentStyle = styled.div``;
+const TextComponentStyle = styled.div`
+        
+
+`;
 
 const TextFieldComp: React.FC<ITextField> = ({
-  errors,
-  name,
-  onChange,
-  onBlur,
-  id,
-  label,
+    error, errorText, name, onChange, onBlur, id, label
 }) => {
-  return (
-    <TextComponentStyle>
-      <Box component="div">
-        {label && (
-          <InputLabel htmlFor={id} error={!!errors}>
-            {label}
-          </InputLabel>
-        )}
-        <TextField
-          className="form_Control"
-          error={false}
-          {...{ id, name, onChange, onBlur }}
-        />
-        <FormHelperText
-          component="p"
-          classes={{ root: !!errors ? `${name}_error` : "" }}
-          error={!!errors}
-        >
-          {errors}
-        </FormHelperText>
-      </Box>
-    </TextComponentStyle>
-  );
-};
+    return (
+        <TextComponentStyle>
+            <Box component="div" className={`${name}_form_control`} >
+                {label && <InputLabel htmlFor={id} error={!!error}>{label}</InputLabel>}
+                <TextField
+                    className="form_Control"
+                    error={false}
+                    {...{ id, name, onChange, onBlur }}
+                    helperText={errorText}
+                />
+            </Box>
+        </TextComponentStyle >
+    )
+}
 
 export default TextFieldComp;
