@@ -9,6 +9,9 @@ declare module "styled-components" {
       black: string;
       pink: string;
       gardientSite: string;
+      LBlue: string;
+      MBlue: string;
+      Blue: string;
     };
     fontSizes: {
       small: string;
@@ -26,7 +29,10 @@ const theme: DefaultTheme = {
     purple: "#1d619f",
     black: "#040404",
     pink: " #A31265",
-    gardientSite: "linear-gradient(90deg, rgba(235,240,244,1) 0%, rgba(166,192,216,1) 50%, rgba(29,97,159,1) 100%);"
+    gardientSite: "linear-gradient(90deg, rgba(235,240,244,1) 0%, rgba(166,192,216,1) 50%, rgba(29,97,159,1) 100%);",
+    LBlue: "#EBF0F4",
+    MBlue: "#A6C0D8",
+    Blue: "#6291BB",
   },
   fonts: ["sans-serif", "Roboto"],
   fontSizes: {

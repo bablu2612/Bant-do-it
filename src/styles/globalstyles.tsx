@@ -8,7 +8,10 @@ const GlobalStyle = createGlobalStyle`
    --purple:${(props) => props.theme.colors.purple};
    --black:${(props) => props.theme.colors.black};
    --pink: ${(props) => props.theme.colors.pink};
-   --site-gradient: ${(props) => props.theme.colors.gardientSite};;
+   --site-gradient: ${(props) => props.theme.colors.gardientSite};
+   --LBlue: ${(props) => props.theme.colors.LBlue}; 
+   --MBlue: ${(props) => props.theme.colors.MBlue}; 
+   --Blue: ${(props) => props.theme.colors.Blue}; 
 }
   * {
 margin: 0;
@@ -206,5 +209,53 @@ p.errormsg {
         -ms-transform: rotate(3deg) translate(0px, -4px);
             transform: rotate(3deg) translate(0px, -4px);
   }
+
+  .Heading {
+    background: var(--LBlue);
+    padding: 15px 20px;
+    font-size: 16px; 
+    font-weight: 600;
+    position: relative;
+    border-radius: 5px 5px 0 0; 
+    &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 2px;
+    height: 30px;
+    background: var(--purple);
+}
+}
+.table-responsive{ 
+  .table {
+    padding: 10px;
+    background: #fff; 
+    border-radius: 0 0 5px 5px; 
+}
+}
+.rdt_TableHeadRow {
+    border-top: 1px solid #e9ebec;
+    border-bottom: 1px solid #e9ebec;
+    background: var(--purple);
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    :hover {
+    background: #f9f9f9;
+}
+   & > div {
+    padding: 10px 15px;
+    font-weight: 600;
+    font-size: 14px;
+}
+} 
+.rdt_TableCell { 
+    padding: 10px 15px; 
+    font-size: 14px; 
+}
+ 
 `;
 export default GlobalStyle;

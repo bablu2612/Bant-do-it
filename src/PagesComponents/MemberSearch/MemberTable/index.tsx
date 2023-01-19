@@ -68,9 +68,14 @@ const data = [
 ];
 const MemberTable = () => {
   return (
-    <Box sx={{ marginTop: "100px", width: "80%", marginLeft: "250px" }}>
-      <DataTable columns={columns as any} data={data} />
-    </Box>
+    <main id="wrapper">
+      <Box className="Heading">Member Search</Box>
+      <Box className="table-responsive">
+        <Box className="table">
+          <DataTable columns={columns as any} data={data} />
+        </Box>
+      </Box>
+    </main>
   );
 };
 
