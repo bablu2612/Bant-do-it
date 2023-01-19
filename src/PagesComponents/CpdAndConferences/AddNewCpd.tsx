@@ -12,10 +12,11 @@ import {
   TextField,
 } from "@mui/material";
 import styles from "@/styles/Home.module.css";
+import PhotoDetailsComponent from "./PhotoDetails";
 
 const AddNewCpdComponent = ({setShowAddNew}:any) => {
   const [type, setType] = useState("Any");
-
+const [showproductDetails,setShowProductDetails]=useState(false)
   const handleChange = (event: SelectChangeEvent) => {
     setType(event.target.value as string);
   };
@@ -37,7 +38,8 @@ const AddNewCpdComponent = ({setShowAddNew}:any) => {
 
   return (
     <Box component="main" className={styles.main} id="wrapper">
-      <Box>
+        {!showproductDetails ? <>
+              <Box>
         <h2 className="">Type of Event / Activity</h2>
       </Box>
 
@@ -78,10 +80,15 @@ const AddNewCpdComponent = ({setShowAddNew}:any) => {
 
       <Box className="Button for add_section">
         <Button className="back" onClick={()=>setShowAddNew()}>{'<'} Back</Button>
-        <Button className="next">Next {'>'} </Button>
+        <Button className="next" onClick={()=>setShowProductDetails(prev=>!prev)}>Next {'>'} </Button>
         <Button className="cancel" onClick={()=>setShowAddNew()} >Cancel</Button>
 
       </Box>
+      </>
+      :
+
+      <PhotoDetailsComponent setShowProductDetails={()=>setShowProductDetails(prev=>!prev)} />
+    }
     </Box>
   );
 };
