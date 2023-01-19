@@ -14,7 +14,9 @@ const LayoutWithLogin = ({ children }: props) => {
     <Box className={`main_components ${isactive ? "active" : "not-active"}`}>
       <Header setIsActive={setIsActive} />
       <SideBar />
-      {children}
+      <Box component="main" id="wrapper">
+        {children}
+      </Box>
       <Footer />
     </Box>
   );

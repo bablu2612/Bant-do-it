@@ -17,7 +17,7 @@ export default function SideBar() {
       icon: <Home />,
     },
     {
-      multiHref: ["/memberSearch"],
+      multiHref: ["/memberSearch", "/editmemberfaces"],
       link: "/memberSearch",
       title: "Member Search",
       icon: <Groups />,
@@ -42,7 +42,7 @@ export default function SideBar() {
     },
   ];
 
-  
+
   return (
     <SidebarStyles>
       <Box id="sidebar" className="sidebar">
