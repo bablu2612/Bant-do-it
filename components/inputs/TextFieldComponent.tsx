@@ -16,7 +16,9 @@ const TextComponentStyle = styled.div`
 
 `;
 
-const TextFieldComp: React.FC<ITextField> = ({ error, errorText, name, onChange, onBlur, id, label }) => {
+const TextFieldComp: React.FC<ITextField> = ({
+    error, errorText, name, onChange, onBlur, id, label
+}) => {
     return (
         <TextComponentStyle>
             <Box component="div" className={`${name}_form_control`} >

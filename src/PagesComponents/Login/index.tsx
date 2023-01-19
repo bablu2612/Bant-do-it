@@ -12,6 +12,11 @@ const { emailText, passwordText, signIntoText, welcomeText, loginButtonText } =
 const LoginComponent = (props: ILoginComponentProps) => {
   const INITIAL_VALUE: LoginCredential = { email: "", password: "" };
 
+  const loginValues = [
+    { email: "test@gmail.com", admin: 1 },
+    { email: "test@gmail.com", admin: 2 },
+  ];
+
   return (
     <Loginstyles>
       <Box className="main">

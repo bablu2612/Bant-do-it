@@ -40,6 +40,12 @@ export default function SideBar() {
       title: "CPD and Conferences",
       icon: <PersonAdd />,
     },
+    {
+      multiHref: ["/memberAdmin"],
+      link: "/memberAdmin",
+      title: "Member Admin",
+      icon: <PersonAdd />,
+    },
   ];
 
 

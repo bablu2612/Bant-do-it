@@ -4,11 +4,13 @@ import useLoginHook from "@/hooks/login.hook";
 import LoginComponent from "@/PagesComponents/Login";
 
 const Login = (props: ILoginProps) => {
+  const loginValues = [
+    { email: "test@gmail.com", admin: 1 },
+    { email: "test@gmail.com", admin: 2 },
+  ];
   const [_handleLogin] = useLoginHook(props);
 
-  return (
-    <LoginComponent {...{ _handleLogin }} />
-  );
-}
+  return <LoginComponent {...{ _handleLogin }} />;
+};
 
-export default withoutAuth(Login, '/dashboard')
+export default withoutAuth(Login, "/dashboard");
