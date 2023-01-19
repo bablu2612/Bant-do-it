@@ -19,8 +19,11 @@ import AddIcon from "@mui/icons-material/Add";
 import EditIcon from "@mui/icons-material/Edit";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import CloseIcon from "@mui/icons-material/Close";
+import AddNewCpdComponent from "./AddNewCpd";
 const CpdAndConferencesComponent = () => {
   const [type, setType] = useState("Any");
+  const [showAddForm, setShowAddNew] = useState(false);
+
 
   const handleChange = (event: SelectChangeEvent) => {
     setType(event.target.value as string);
@@ -43,6 +46,7 @@ const CpdAndConferencesComponent = () => {
 
   return (
     <CpdAndConferencesStyles>
+      {!showAddForm ? 
       <Box component="main" className={styles.main} id="wrapper">
         <Box>
           <h2 className="">EVENTS AND CONFERENCES</h2>
@@ -54,7 +58,7 @@ const CpdAndConferencesComponent = () => {
         </Box>
         <Box className="add button">
           <Box className="form_Group">
-            <Button className="MuiButton-containedPrimary" onClick={()=>{console.log('here')}}>
+            <Button className="MuiButton-containedPrimary" onClick={()=>{setShowAddNew((prev=>!prev))}}>
               <AddIcon /> Add New
             </Button>
           </Box>
@@ -192,6 +196,10 @@ const CpdAndConferencesComponent = () => {
           </Box>
         </Box>
       </Box>
+      :
+
+      <AddNewCpdComponent setShowAddNew={()=>{setShowAddNew((prev=>!prev))}} />
+            }
     </CpdAndConferencesStyles>
   );
 };
