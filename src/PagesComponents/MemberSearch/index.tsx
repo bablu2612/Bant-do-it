@@ -76,7 +76,7 @@ const MemberSearchComponent = () => {
         <Box component="main" id="wrapper">
           <div className="dash">Member Search</div>
           <Box className="form-bg">
-            <img src="/Images/pattern.webp" className="bg-pattern" />
+            <img src="/images/pattern.webp" className="bg-pattern" />
             <Box className="box-form">
               <h2>
                 {" "}

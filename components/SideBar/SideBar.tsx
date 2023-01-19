@@ -34,8 +34,15 @@ export default function SideBar() {
       title: "Create Member",
       icon: <PersonAdd />,
     },
+    {
+      multiHref: ["/cpdAndConferences"],
+      link: "/cpdAndConferences",
+      title: "CPD and Conferences",
+      icon: <PersonAdd />,
+    },
   ];
 
+  
   return (
     <SidebarStyles>
       <Box id="sidebar" className="sidebar">

@@ -28,7 +28,7 @@ const LoginComponent = (props: ILoginComponentProps) => {
           >
             {({ values, handleChange, handleBlur, errors, touched }) => (
               <Form className="form">
-                <img src="Images/Logoold.png" />
+                <img src="images/Logoold.png" />
                 <h1>{welcomeText}</h1>
                 <h3>{signIntoText}</h3>
                 <TextField
@@ -64,10 +64,10 @@ const LoginComponent = (props: ILoginComponentProps) => {
             className="right_image"
             height={100}
             width={100}
-            src="/Images/pattern.webp"
+            src="/images/pattern.webp"
             alt="logo"
           /> */}
-          {/* <img src="./Images/pattern.webp" /> */}
+          {/* <img src="./images/pattern.webp" /> */}
         </Box>
       </Box>
     </Loginstyles>
