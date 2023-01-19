@@ -236,26 +236,143 @@ p.errormsg {
     background: #fff; 
     border-radius: 0 0 5px 5px; 
 }
-}
 .rdt_TableHeadRow {
     border-top: 1px solid #e9ebec;
     border-bottom: 1px solid #e9ebec;
     background: var(--purple);
     color: #fff;
     border-radius: 5px 5px 0 0;
-    :hover {
+ 
+.rdt_TableBody{
+  :hover {
     background: #f9f9f9;
 }
-   & > div {
+}
+& > div {
     padding: 10px 15px;
     font-weight: 600;
     font-size: 14px;
 }
 } 
+}
+
+ 
 .rdt_TableCell { 
     padding: 10px 15px; 
     font-size: 14px; 
 }
+.main_api_data_part {
+    margin-top: 50px;
+    background: #fff;
+}
+.Blog {
+  &>div{
+    padding: 20px;
+  }
+  .first_section {
+    background: #f7f7f7;
+    display: grid;
+    place-items: center; 
+    img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+}
+.secound_section{
+  strong {
+    color: var(--purple);
+}
+a{
+  color: var(--orange);
+  font-weight: 600;
+}
+}
+.third_section{
+  >div {
+    background: var(--orange);
+    display: inline-flex;
+    max-width: 100px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 10px;
+    min-height: 45px;
+    color: #fff;
+}
+}
+}
+.d_Flex.search_cstm.MuiBox-root.css-0 {
+    font-size: 16px;
+    font-family: var(--common-font);
+    margin-bottom: 20px;
+    color: var(--purple);
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    justify-content: space-between;
+    line-height: normal;
+    align-items: center;
+}
+
+.d_Flex.CpD {
+    padding: 0 20px;
+}
+
+p.sub-head a {
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+.main_api_data_part {
+  margin: 50px auto;
+    background: #fff;
+    display: flow-root;
+}
+
+.Blog {
+    display: flex;
+    background: #daedff;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+    border-radius: 10px; 
+    box-shadow: 0 0 20px 1px rgb(0 0 0 / 8%);
+    .first_section   {
+    background: #f7f7f7;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 200px;
+   img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+}
+.secound_section {
+  h3 {
+    margin-bottom: 3px;
+}
+p {
+    margin-bottom: 15px;
+}
+strong {
+    color: var(--purple);
+}
+
+}
+.third_section {
+    display: flex;
+    flex-direction: column; 
+    max-width: 200px;
+    width: 100%;
+}
+}
+ 
+
+  
+
+
  
 `;
 export default GlobalStyle;

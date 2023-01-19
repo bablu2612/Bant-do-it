@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import styles from "@/styles/Home.module.css";
 
-const AddNewCpdComponent = ({setShowAddNew}:any) => {
+const AddNewCpdComponent = ({ setShowAddNew }: any) => {
   const [type, setType] = useState("Any");
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -40,47 +40,50 @@ const AddNewCpdComponent = ({setShowAddNew}:any) => {
       <Box>
         <h2 className="">Type of Event / Activity</h2>
       </Box>
+      <Box className="box-form form-bg">
+        <Box className="cpdform_main">
+          <Box className="left-side-select">
+            <Box className="form_Group">
+              <InputLabel>What kind of event / activity is it?</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                className="form_Control"
+                label="Age"
+                onChange={handleChange}
+                value={type}
+              >
+                <MenuItem value={""}>Any</MenuItem>
+                {typeOfEvent?.map((val, index) => {
+                  return (
+                    <MenuItem key={index} value={val?.value}>
+                      {val?.label}
+                    </MenuItem>
+                  );
+                })}
+              </Select>
+            </Box>
+          </Box>
 
-      <Box className="cpdform_main">
-        <Box className="left-side-select">
-          <Box className="form_Group">
-            <InputLabel>What kind of event / activity is it?</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              label="Age"
-              onChange={handleChange}
-              value={type}
-            >
-              <MenuItem value={""}>Any</MenuItem>
-              {typeOfEvent?.map((val, index) => {
-                return (
-                  <MenuItem key={index} value={val?.value}>
-                    {val?.label}
-                  </MenuItem>
-                );
-              })}
-            </Select>
+          <Box className="right_side-select">
+            <Box className="form_Group">
+              <InputLabel>Event / Activity Title</InputLabel>
+              <Input
+                type="text"
+                className="form_Control"
+                placeholder="BANT Accredited Professional Supervision Group"
+                value={"BANT Accredited Professional Supervision Group"}
+              />
+            </Box>
           </Box>
         </Box>
 
-        <Box className="right_side-select">
-          <Box className="form_Group">
-            <InputLabel>Event / Activity Title</InputLabel>
-            <Input
-              type="text"
-              placeholder="BANT Accredited Professional Supervision Group"
-              value={"BANT Accredited Professional Supervision Group"}
-            />
-          </Box>
+        <Box className="Button for add_section">
+          <Button className="back" onClick={() => setShowAddNew()}>{'<'} Back</Button>
+          <Button className="next">Next {'>'} </Button>
+          <Button className="cancel" onClick={() => setShowAddNew()} >Cancel</Button>
+
         </Box>
-      </Box>
-
-      <Box className="Button for add_section">
-        <Button className="back" onClick={()=>setShowAddNew()}>{'<'} Back</Button>
-        <Button className="next">Next {'>'} </Button>
-        <Button className="cancel" onClick={()=>setShowAddNew()} >Cancel</Button>
-
       </Box>
     </Box>
   );

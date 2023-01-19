@@ -4,7 +4,7 @@ export const Footerstyles = styled.div`
 div#footer {
     background: #6291BB;
     text-align: center;
-    z-index: 1;
+    z-index: 9;
     position: fixed;
     padding: 10px 0;
     padding-left: 240px;

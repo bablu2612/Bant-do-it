@@ -14,7 +14,7 @@ const SidebarStyles = styled.div`
     -webkit-box-shadow: 0 8px 17px rgb(0 0 0 / 20%);
     box-shadow: 0 8px 17px rgb(0 0 0 / 20%);
     transition: transform 0.3s ease-in-out;
-    background: #1D619F;
+    background: var(--purple);
     ul {
       padding-top: 10px;
       li a {
