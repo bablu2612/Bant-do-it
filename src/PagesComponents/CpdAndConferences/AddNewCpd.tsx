@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import styles from "@/styles/Home.module.css";
 
-const AddNewCpdComponent = ({setShowAddNew}) => {
+const AddNewCpdComponent = ({setShowAddNew}:any) => {
   const [type, setType] = useState("Any");
 
   const handleChange = (event: SelectChangeEvent) => {
