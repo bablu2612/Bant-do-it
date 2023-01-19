@@ -85,6 +85,8 @@ const MemberSearchStyles = styled.div`
         flex: calc(100% / 2 - 10px);
       }
     }
-  }
+  } 
+ 
+
 `;
 export default MemberSearchStyles;
