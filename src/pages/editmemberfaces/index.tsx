@@ -1,6 +1,7 @@
 import withAuth from "@/Auth/withAuth";
 import LayoutWithLogin from "@/Layout";
 import AdminInfoComponent from "@/PagesComponents/EditMemberFaces/AdminInfo";
+import EditMemberFacesStyle from "@/PagesComponents/EditMemberFaces/EditMember.style";
 import { TabsListConstent } from "@/PagesComponents/EditMemberFaces/EditMemberFaces.constent";
 import MemberHistoryComponent from "@/PagesComponents/EditMemberFaces/MemberHistory";
 import PersonalInfoComponent from "@/PagesComponents/EditMemberFaces/PersonalInfo";
@@ -39,9 +40,11 @@ const EditMemberFaces: React.FC = () => {
 
     return (
         <LayoutWithLogin>
-            <TabComponent tabslist={TabsListConstent} currentTab={currentTab} onTabChange={(value: string) => _handleTabChange(value)}>
-                {_currentComponent()}
-            </TabComponent>
+            <EditMemberFacesStyle>
+                <TabComponent tabslist={TabsListConstent} currentTab={currentTab} onTabChange={(value: string) => _handleTabChange(value)}>
+                    {_currentComponent()}
+                </TabComponent>
+            </EditMemberFacesStyle>
         </LayoutWithLogin>
     );
 }

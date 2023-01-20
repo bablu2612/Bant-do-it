@@ -1,68 +1,72 @@
 import { Box } from '@mui/material';
+import ButtonComponent from 'components/inputs/ButtonComponent';
 import TextFieldComp from 'components/inputs/TextFieldComponent';
 import * as React from 'react';
 import EditMemberCommonLayout from '../EditMemberFaces.constent';
+import { PersonalInfoFirstSectionStyle } from './personalInfo.style';
 
-const PersonalInfoFirstSection: React.FC = () => {
+const PersonalFirstComponent: React.FC = () => {
 
     return (
         <EditMemberCommonLayout heading='Primary Details (The information on this page will NOT be displayed publicly)'>
-            PersonalInfoFirstSection
-            <Box component={"div"} className="prsonalFirst_section">
-                <Box>
+            <PersonalInfoFirstSectionStyle className="prsonalFirst_section">
+                <Box className="field_section">
                     <TextFieldComp
                         name="member_no"
                         label="Member No"
                         onChange={(e) => console.log('helo')}
                         onBlur={(e) => console.log('hello')}
                     />
-                    <Box component={'div'}>
+                    <Box component={'div'} className="input_or_button">
                         <TextFieldComp
-                            name="member_no"
-                            label="Member No"
+                            name="membership_type"
+                            label="Membership Type"
                             onChange={(e) => console.log('helo')}
                             onBlur={(e) => console.log('hello')}
                         />
+                        <ButtonComponent classes='update_member' onClick={() => console.log('update')}>
+                            Update Member Default Settings
+                        </ButtonComponent>
                     </Box>
                 </Box>
-                <Box>
+                <Box className="field_section">
                     <TextFieldComp
-                        name="member_no"
-                        label="Member No"
+                        name="first_name"
+                        label="First Name"
                         onChange={(e) => console.log('helo')}
                         onBlur={(e) => console.log('hello')}
                     />
                     <TextFieldComp
-                        name="member_no"
-                        label="Member No"
-                        onChange={(e) => console.log('helo')}
-                        onBlur={(e) => console.log('hello')}
-                    />
-                </Box>
-                <Box>
-                    <TextFieldComp
-                        name="member_no"
-                        label="Member No"
-                        onChange={(e) => console.log('helo')}
-                        onBlur={(e) => console.log('hello')}
-                    />
-                    <TextFieldComp
-                        name="member_no"
-                        label="Member No"
+                        name="last_name"
+                        label="Last Name"
                         onChange={(e) => console.log('helo')}
                         onBlur={(e) => console.log('hello')}
                     />
                 </Box>
-                <Box>
+                <Box className="field_section">
                     <TextFieldComp
-                        name="member_no"
-                        label="Member No"
+                        name="date_of_birth"
+                        label="Date of Birth"
+                        onChange={(e) => console.log('helo')}
+                        onBlur={(e) => console.log('hello')}
+                    />
+                    <TextFieldComp
+                        name="gender"
+                        label="Gender"
                         onChange={(e) => console.log('helo')}
                         onBlur={(e) => console.log('hello')}
                     />
                 </Box>
-            </Box>
+                <Box className="field_section">
+                    <TextFieldComp
+                        name="email_address"
+                        label="E-mail"
+                        onChange={(e) => console.log('helo')}
+                        onBlur={(e) => console.log('hello')}
+                    />
+                </Box>
+            </PersonalInfoFirstSectionStyle>
         </EditMemberCommonLayout>
     );
 }
-export default PersonalInfoFirstSection;
+export default PersonalFirstComponent;

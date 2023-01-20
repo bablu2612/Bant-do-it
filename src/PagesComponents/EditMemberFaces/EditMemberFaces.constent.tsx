@@ -4,15 +4,24 @@ import * as React from 'react';
 export const TabsListConstent: string[] = [
     "Personal Info", "Qualification Info", "Practice Info", "Admin Info", "Member History"
 ];
-
-
 const EditMemberCommonLayout: React.FC<{ children: React.ReactNode, heading: string }> = ({ children, heading }) => {
     return (
         <Box component="div" className='editMember_main_layout'>
-            <Box component="h2">{heading}</Box>
+            <Box component="h2" className='main_heading'>{heading}</Box>
             <Box component="div" className="innrer_section">{children}</Box>
         </Box>
     )
 }
+
+export const QualificationCostents = {
+    theadValues: [
+        { label: "Course", value: "course" },
+        { label: "Institute", value: "institute" },
+        { label: "Start Date", value: "start_date" },
+        { label: "Graduation Date", value: "graduation_date" },
+    ]
+
+}
+
 
 export default EditMemberCommonLayout;

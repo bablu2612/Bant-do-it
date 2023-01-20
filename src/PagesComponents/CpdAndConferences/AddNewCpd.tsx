@@ -37,7 +37,7 @@ const AddNewCpdComponent = ({ setShowAddNew }: any) => {
   ];
 
   return (
-    <Box component="main" className={styles.main} id="wrapper">
+    <>
       {!showproductDetails ? <>
         <Box className="dash">
           Type of Event / Activity
@@ -96,7 +96,7 @@ const AddNewCpdComponent = ({ setShowAddNew }: any) => {
 
         <PhotoDetailsComponent setShowProductDetails={() => setShowProductDetails(prev => !prev)} />
       }
-    </Box>
+    </>
   );
 };
 

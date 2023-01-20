@@ -23,7 +23,6 @@ const TabComponent: React.FC<ITabComponent> = ({ children, tabslist, currentTab,
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                     <TabList onChange={(e: React.SyntheticEvent, newValue: string) => onTabChange(newValue)} aria-label="lab API tabs example">
                         {_.map(tabslist, (row: string, index: number) => {
-                            console.log(_replaceAndLowerCase(row))
                             return <Tab key={'tab' + index} label={row} value={_replaceAndLowerCase(row)} />;
                         })}
                     </TabList>
