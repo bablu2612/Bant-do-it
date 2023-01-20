@@ -36,12 +36,13 @@ const CreateMemberComponent = () => {
 
   return (
     <CreateMemberSearchStyles>
+      <Box className="dash">
+        Member Applications
+      </Box>
       <Box className="form-bg">
         <img src="/images/pattern.webp" className="bg-pattern" />
         <Box className="box-form">
-          <Box>
-            <h2 className="dash">View Applications</h2>
-          </Box>
+          <h2>Create Member</h2>
           <Box className="form_memberSearch">
             <Box className="form_Group">
               <InputLabel>Membership Type</InputLabel>

@@ -86,8 +86,13 @@ const data = [
 ];
 const ApplicationTable = () => {
   return (
-    <Box sx={{ marginTop: "100px", width: "80%", marginLeft: "250px" }}>
-      <DataTable columns={columns as any} data={data} />
+    <Box>
+      <Box className="Heading">Application Search</Box>
+      <Box className="table-responsive">
+        <Box className="table">
+          <DataTable columns={columns as any} data={data} />
+        </Box>
+      </Box>
     </Box>
   );
 };

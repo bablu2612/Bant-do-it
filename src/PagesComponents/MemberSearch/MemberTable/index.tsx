@@ -68,14 +68,14 @@ const data = [
 ];
 const MemberTable = () => {
   return (
-    <main id="wrapper">
+    <Box>
       <Box className="Heading">Member Search</Box>
       <Box className="table-responsive">
         <Box className="table">
           <DataTable columns={columns as any} data={data} />
         </Box>
       </Box>
-    </main>
+    </Box>
   );
 };
 

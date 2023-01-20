@@ -27,62 +27,65 @@ const ApplicationSearchComponent = () => {
   return (
     <ApplicationSearchStyles>
       {applictionearch ? (
-        <Box className="form-bg">
-          <img src="/Images/pattern.webp" className="bg-pattern" />
-          <Box className="box-form">
-            <Box>
-              <h2 className="dash">View Applications</h2>
-            </Box>
-            <Box className="form_memberSearch">
-              <Box className="form_Group">
-                <InputLabel>Application Type</InputLabel>
-                <Select
-                  className="form_Control"
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  label="Age"
-                  onChange={handleChangeType}
-                  value={type}
-                >
-                  <MenuItem value={"Any"}>Any</MenuItem>
-                  {applicationType?.map((val, index) => {
-                    return (
-                      <MenuItem key={index} value={val?.value}>
-                        {val?.label}
-                      </MenuItem>
-                    );
-                  })}
-                </Select>
-              </Box>
-              <Box className="form_Group">
-                <InputLabel>Application status</InputLabel>
-                <Select
-                  className="form_Control"
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  label="Age"
-                  onChange={handleChangeStatus}
-                  value={status}
-                >
-                  <MenuItem value={"Any"}>Any</MenuItem>
-                  {applicationStatus?.map((val, index) => {
-                    return (
-                      <MenuItem key={index} value={val?.value}>
-                        {val?.label}
-                      </MenuItem>
-                    );
-                  })}
-                </Select>
-              </Box>
-              <Box className="form_Group">
-                <Button
-                  onClick={() => {
-                    setApplicationSearch(false);
-                  }}
-                  className="MuiButton-containedPrimary"
-                >
-                  Search
-                </Button>
+        <Box>
+          <Box className="dash">
+            View Applications
+          </Box>
+          <Box className="form-bg">
+            <img src="/Images/pattern.webp" className="bg-pattern" />
+            <Box className="box-form">
+              <h2>Applications</h2>
+              <Box className="form_memberSearch">
+                <Box className="form_Group">
+                  <InputLabel>Application Type</InputLabel>
+                  <Select
+                    className="form_Control"
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    label="Age"
+                    onChange={handleChangeType}
+                    value={type}
+                  >
+                    <MenuItem value={"Any"}>Any</MenuItem>
+                    {applicationType?.map((val, index) => {
+                      return (
+                        <MenuItem key={index} value={val?.value}>
+                          {val?.label}
+                        </MenuItem>
+                      );
+                    })}
+                  </Select>
+                </Box>
+                <Box className="form_Group">
+                  <InputLabel>Application status</InputLabel>
+                  <Select
+                    className="form_Control"
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    label="Age"
+                    onChange={handleChangeStatus}
+                    value={status}
+                  >
+                    <MenuItem value={"Any"}>Any</MenuItem>
+                    {applicationStatus?.map((val, index) => {
+                      return (
+                        <MenuItem key={index} value={val?.value}>
+                          {val?.label}
+                        </MenuItem>
+                      );
+                    })}
+                  </Select>
+                </Box>
+                <Box className="form_Group">
+                  <Button
+                    onClick={() => {
+                      setApplicationSearch(false);
+                    }}
+                    className="MuiButton-containedPrimary"
+                  >
+                    Search
+                  </Button>
+                </Box>
               </Box>
             </Box>
           </Box>

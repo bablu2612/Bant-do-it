@@ -24,7 +24,7 @@ const MemberSearchStyles = styled.div`
         font-family: var(--common-font);
         margin-bottom: 20px;
         color: var(--purple);
-        padding: 10px 20px;
+        padding: 40px 40px 20px;
         border-bottom: 1px solid #ddd;
         position: relative;
          &:before {
