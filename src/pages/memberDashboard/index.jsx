@@ -1,6 +1,17 @@
-import { Button } from "@mui/material";
-import Image from "next/image";
 import React from "react";
+import { Button } from "@mui/material";
+import {
+  Done,
+  Person2,
+  Print,
+  WatchLaterOutlined,
+  Search,
+  Add,
+  InsertChart,
+  Facebook,
+  MedicalServices,
+} from "@mui/icons-material";
+import Image from "next/image";
 
 const MemberDashboard = () => {
   const data = [
@@ -10,39 +21,49 @@ const MemberDashboard = () => {
       href: "https://bant.org.uk/bant-professional-practice-handbook/",
     },
     {
-      image: "https://bant.org.uk/bant/jsp/images/links_icon/pph.png",
-      tittle: "PP Handbook",
-      href: "https://bant.org.uk/bant-professional-practice-handbook/",
+      image: "https://bant.org.uk/bant/jsp/images/links_icon/cpd.png",
+      tittle: "Events & Conferences",
+      href: "https://bant.org.uk/bant/jsp/member/CPDandconferences.faces",
     },
     {
-      image: "https://bant.org.uk/bant/jsp/images/links_icon/pph.png",
-      tittle: "PP Handbook",
-      href: "https://bant.org.uk/bant-professional-practice-handbook/",
+      image: "	https://bant.org.uk/bant/jsp/images/links_icon/membr-benfits.png",
+      tittle: "Member Benefits",
+      href: "https://bant.org.uk/member-benefits/",
     },
     {
-      image: "https://bant.org.uk/bant/jsp/images/links_icon/pph.png",
-      tittle: "PP Handbook",
-      href: "https://bant.org.uk/bant-professional-practice-handbook/",
+      image: "https://bant.org.uk/bant/jsp/images/links_icon/database.png",
+      tittle: "Natural Medicines DB",
+      href: "https://naturalmedicines.therapeuticresearch.com/",
     },
     {
-      image: "https://bant.org.uk/bant/jsp/images/links_icon/pph.png",
-      tittle: "PP Handbook",
-      href: "https://bant.org.uk/bant-professional-practice-handbook/",
+      image: "https://bant.org.uk/bant/jsp/images/links_icon/campaign.png",
+      tittle: "FFYH Resources",
+      href: "https://bant.org.uk/members-area/member-resources/ffyh-members/",
     },
     {
-      image: "https://bant.org.uk/bant/jsp/images/links_icon/pph.png",
-      tittle: "PP Handbook",
-      href: "https://bant.org.uk/bant-professional-practice-handbook/",
+      image: "https://bant.org.uk/bant/jsp/images/links_icon/member-logo.png",
+      tittle: "Member Logo ",
+      href: "https://bant.org.uk/members-area/bant-member-logo/",
     },
     {
-      image: "https://bant.org.uk/bant/jsp/images/links_icon/pph.png",
-      tittle: "PP Handbook",
-      href: "https://bant.org.uk/bant-professional-practice-handbook/",
+      image: "https://bant.org.uk/bant/jsp/images/links_icon/learning-zone.png",
+      tittle: "Learning Zone",
+      href: "https://bant.org.uk/members-area/science-and-education/#learning-zone",
     },
     {
-      image: "https://bant.org.uk/bant/jsp/images/links_icon/pph.png",
-      tittle: "PP Handbook",
-      href: "https://bant.org.uk/bant-professional-practice-handbook/",
+      image: "https://bant.org.uk/bant/jsp/images/links_icon/enews.png",
+      tittle: "eNews",
+      href: "https://bant.org.uk/category/enews/whats-new/",
+    },
+    {
+      image: "https://bant.org.uk/bant/jsp/images/links_icon/classified.png",
+      tittle: "Classifieds",
+      href: "https://bant.org.uk/category/classified/",
+    },
+    {
+      image: "https://bant.org.uk/bant/jsp/images/links_icon/eblast.png",
+      tittle: "eblast Archive",
+      href: "https://bant.org.uk/category/eblast/",
     },
   ];
   return (
@@ -84,7 +105,10 @@ const MemberDashboard = () => {
                         <span>Membership Status: </span>
                       </td>
                       <td>
-                        <span>Logo</span>
+                        <span>
+                          <Done />
+                          Active
+                        </span>
                       </td>
                     </tr>
                     <tr>
@@ -92,7 +116,10 @@ const MemberDashboard = () => {
                         <span>Next Renewal Date :</span>
                       </td>
                       <td>
-                        <span>Logo</span>
+                        <span>
+                          <Done />
+                          Jan 01, 2024
+                        </span>
                       </td>
                     </tr>
                   </tbody>
@@ -103,9 +130,11 @@ const MemberDashboard = () => {
           </div>
           <div className="edit_print">
             <Button>
+              <Person2 />
               Edit Personal/Practice <br /> Details
             </Button>
             <Button>
+              <Print />
               Print Membership <br /> Certificate
             </Button>
           </div>
@@ -131,15 +160,21 @@ const MemberDashboard = () => {
         </div>
       </div>
       <div>
-        <h4>Logo CPD Hours Summary</h4>
+        <h4>
+          <WatchLaterOutlined /> CPD Hours Summary
+        </h4>
         <ul>
           <li>
             <span>
-              <a href="#">Logo View Detailed CPD Log</a>
+              <a href="#">
+                <Search /> View Detailed CPD Log
+              </a>
             </span>
           </li>
           <li>
-            <Button>Logo Add New Activity</Button>
+            <Button>
+              <Add /> Add New Activity
+            </Button>
           </li>
         </ul>
         <table>
@@ -172,6 +207,78 @@ const MemberDashboard = () => {
             <td>0.0</td>
           </tr>
         </table>
+        <div>
+          <div>
+            <h4>
+              <InsertChart />
+              Recorded Analytics (since 14/11/2020)
+            </h4>
+          </div>
+          <div>
+            <table>
+              <tbody>
+                <tr>
+                  <th>
+                    <span>Filter by range</span>
+                    <select name="cars" id="cars">
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="mercedes">Mercedes</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </th>
+                  <th>
+                    <div>
+                      <span>Filter by date</span>
+                      <input
+                        type="checkbox"
+                        id="datecheck"
+                        name="datecheck"
+                        value="true"
+                      />
+                    </div>
+                    <span>From date</span>
+                    <input type="date" id="birthday" name="birthday"></input>
+                    <span>To date</span>
+                    <input type="date" id="birthday" name="birthday"></input>
+                    <Button>Submit</Button>
+                  </th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td colSpan={4}>
+                    Below are the statistics for the traffic you've received
+                    through the BANT website since 14/11/2020
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table>
+                      <thead>
+                        <th>Analytics Type</th>
+                        <th>Hits</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <Facebook />
+                          </td>
+                          <td>1</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <MedicalServices />
+                          </td>
+                          <td>10</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </>
   );

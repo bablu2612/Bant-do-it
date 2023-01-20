@@ -1,27 +1,36 @@
-import { Button, InputLabel } from "@mui/material";
 import React, { useState } from "react";
+import { Add, Delete, Edit } from "@mui/icons-material";
+import { Button, InputLabel } from "@mui/material";
 import TextFieldComp from "components/inputs/TextFieldComponent";
+import Image from "next/image";
 
 const AccountFaces = () => {
-  const [personal, setPersonal] = useState(true);
+  const [personal, setPersonal] = useState("1");
 
   return (
     <div className="acountfacesNew">
       <Button
         onClick={() => {
-          setPersonal(true);
+          setPersonal("1");
         }}
       >
         PERSONAL INFO
       </Button>
       <Button
         onClick={() => {
-          setPersonal(false);
+          setPersonal("2");
         }}
       >
         QUALIFICATION INFO
       </Button>
-      {personal ? (
+      <Button
+        onClick={() => {
+          setPersonal("3");
+        }}
+      >
+        PRACTICE INFO
+      </Button>
+      {personal === "1" ? (
         <div className="personal_main">
           <div className="head">
             <span>
@@ -69,7 +78,9 @@ const AccountFaces = () => {
               </div>
             </div>
             <div className="Row">
-              <div>"Date*********************"</div>
+              <div>
+                <input type="date" id="birthday" name="birthday" />
+              </div>
               <div>
                 <InputLabel>Gender</InputLabel>
                 <select name="cars" id="cars">
@@ -221,7 +232,7 @@ const AccountFaces = () => {
           <Button>Save</Button>
           <Button>cancel</Button>
         </div>
-      ) : (
+      ) : personal === "2" ? (
         <div className="qualification_main">
           <div className="head">Qualifications</div>
           <div className="panelBody">
@@ -237,6 +248,311 @@ const AccountFaces = () => {
               <th>Graduation Date</th>
               <th>Edit</th>
             </table>
+          </div>
+          <Button>Save</Button>
+          <Button>Cancel</Button>
+        </div>
+      ) : (
+        <div className="practice_info">
+          <div>
+            <div className="head">
+              Practising Information (The information on this page will be
+              displayed publicly)
+            </div>
+            <div className="content">
+              <div className="pic">
+                <div className="avatar">
+                  <Image
+                    height={100}
+                    width={100}
+                    src="	https://bant.org.uk/bant/content/images/members/no-avatar.png"
+                    alt="avatar"
+                  />
+                </div>
+                <div className="buttons">
+                  <Button>Change Photo</Button>
+                </div>
+                <div>
+                  <InputLabel>Profession</InputLabel>
+                  <select name="cars" id="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+                <div>
+                  <InputLabel>Tick the options that apply</InputLabel>
+                  <input
+                    type="checkbox"
+                    id="vehicle1"
+                    name="vehicle1"
+                    value="Bike"
+                  />
+                  <label for="vehicle1">Online Consultations</label>
+                  <input
+                    type="checkbox"
+                    id="vehicle2"
+                    name="vehicle2"
+                    value="Car"
+                  />
+                  <label for="vehicle2">In Person Consultations</label>
+                  <input
+                    type="checkbox"
+                    id="vehicle3"
+                    name="vehicle3"
+                    value="Boat"
+                  />
+                  <label for="vehicle3">Talks/Workshops/Academia</label>
+                  <input
+                    type="checkbox"
+                    id="vehicle3"
+                    name="vehicle3"
+                    value="Boat"
+                  />
+                  <label for="vehicle3">Student Observation Permitted</label>
+                </div>
+              </div>
+              (You are indicating to BANT Student Members that they can observe
+              your clinic. Please see Student Observation guidelines in{" "}
+              <a href="https://bant.org.uk/bant-professional-practice-handbook/students/#student-observations">
+                BANT Professional Practice Handbook )
+              </a>
+            </div>
+          </div>
+          <div>
+            <div className="head">
+              Health Concerns (Please tick all of the health concerns that you
+              work with)
+            </div>
+            <div className="content">
+              <input
+                type="checkbox"
+                id="vehicle1"
+                name="vehicle1"
+                value="Bike"
+              />
+              <label for="vehicle1">Autoimmune Support</label>
+              <input
+                type="checkbox"
+                id="vehicle2"
+                name="vehicle2"
+                value="Car"
+              />
+              <label for="vehicle2">Chronic Fatigue Syndrome/ME</label>
+              <input
+                type="checkbox"
+                id="vehicle3"
+                name="vehicle3"
+                value="Boat"
+              />
+              <label for="vehicle2">Heart Disease</label>
+              <input
+                type="checkbox"
+                id="vehicle1"
+                name="vehicle1"
+                value="Bike"
+              />
+              <label for="vehicle1">Digestion, Gut Health</label>
+              <input
+                type="checkbox"
+                id="vehicle2"
+                name="vehicle2"
+                value="Car"
+              />
+              <label for="vehicle2">Healthy Aging</label>
+              <input
+                type="checkbox"
+                id="vehicle3"
+                name="vehicle3"
+                value="Boat"
+              />
+              <label for="vehicle2">Heart Disease</label>
+              <input
+                type="checkbox"
+                id="vehicle1"
+                name="vehicle1"
+                value="Bike"
+              />
+              <label for="vehicle1">Heart Disease</label>
+              <input
+                type="checkbox"
+                id="vehicle2"
+                name="vehicle2"
+                value="Car"
+              />
+              <label for="vehicle2">Mental Wellbeing and Nutrition</label>
+              <input
+                type="checkbox"
+                id="vehicle3"
+                name="vehicle3"
+                value="Boat"
+              />
+              <label for="vehicle2">Heart Disease</label>
+              <input
+                type="checkbox"
+                id="vehicle1"
+                name="vehicle1"
+                value="Bike"
+              />
+              <label for="vehicle1">Pregnancy, Preconception</label>
+              <input
+                type="checkbox"
+                id="vehicle2"
+                name="vehicle2"
+                value="Car"
+              />
+              <label for="vehicle2">Thyroid Conditions</label>
+              <input
+                type="checkbox"
+                id="vehicle3"
+                name="vehicle3"
+                value="Boat"
+              />
+              <label for="vehicle2">Sports Nutrition</label>
+              <input
+                type="checkbox"
+                id="vehicle1"
+                name="vehicle1"
+                value="Bike"
+              />
+              <label for="vehicle1">Thyroid Conditions</label>
+              <input
+                type="checkbox"
+                id="vehicle2"
+                name="vehicle2"
+                value="Car"
+              />
+              <label for="vehicle2">Weight Management, Weight-Loss</label>
+              <input
+                type="checkbox"
+                id="vehicle3"
+                name="vehicle3"
+                value="Boat"
+              />
+              <label for="vehicle2"> Children, Infants</label>
+              <input
+                type="checkbox"
+                id="vehicle1"
+                name="vehicle1"
+                value="Bike"
+              />
+              <label for="vehicle1">Diabetes</label>
+              <input
+                type="checkbox"
+                id="vehicle2"
+                name="vehicle2"
+                value="Car"
+              />
+              <label for="vehicle2">Food Allergy, Food Intolerance</label>
+              <input
+                type="checkbox"
+                id="vehicle3"
+                name="vehicle3"
+                value="Boat"
+              />
+              <label for="vehicle2">Healthy Eating</label>
+              <input
+                type="checkbox"
+                id="vehicle1"
+                name="vehicle1"
+                value="Bike"
+              />
+              <label for="vehicle1">Men's Health</label>
+              <input
+                type="checkbox"
+                id="vehicle2"
+                name="vehicle2"
+                value="Car"
+              />
+              <label for="vehicle2">Obesity</label>
+              <input
+                type="checkbox"
+                id="vehicle3"
+                name="vehicle3"
+                value="Boat"
+              />
+              <label for="vehicle2">Skin Conditions</label>
+              <input
+                type="checkbox"
+                id="vehicle1"
+                name="vehicle1"
+                value="Bike"
+              />
+              <label for="vehicle1"> Stress Management, Tiredness</label>
+              <input
+                type="checkbox"
+                id="vehicle2"
+                name="vehicle2"
+                value="Car"
+              />
+              <label for="vehicle2">Vegetarian and Vegan Diets</label>
+              <input
+                type="checkbox"
+                id="vehicle3"
+                name="vehicle3"
+                value="Boat"
+              />
+              <label for="vehicle2">Women's Health, Menopause</label>
+            </div>
+          </div>
+          <div>
+            <div className="head">
+              Further Information (Use this section to provide additional info
+              about yourself, your practice and any other appropriate info -
+              limit 3000 characters)
+            </div>
+            <div className="content">
+              <textarea
+                id="w3review"
+                name="w3review"
+                rows="4"
+                cols="50"
+              ></textarea>
+            </div>
+          </div>
+          <div>
+            <div className="head">Practices</div>
+            <div className="content">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Practice</th>
+                    <th>Region</th>
+                    <th>Post Code</th>
+                    <th>Contact</th>
+                    <th>E-Contact</th>
+                    <th>Edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Flat 2, Worley Court 1 Sandifer Drive London Barnet NW2
+                      1TA
+                    </td>
+                    <td>London</td>
+                    <td>NW2 1TA</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <Button>
+                        <Edit />
+                        Edit
+                      </Button>
+                      <Button>
+                        <Delete />
+                        Delete
+                      </Button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <Button>
+                <Add />
+                New Practice
+              </Button>
+            </div>
           </div>
           <Button>Save</Button>
           <Button>Cancel</Button>
