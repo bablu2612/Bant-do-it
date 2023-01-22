@@ -12,8 +12,10 @@ import {
   MedicalServices,
 } from "@mui/icons-material";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const MemberDashboard = () => {
+  const router = useRouter();
   const data = [
     {
       image: "https://bant.org.uk/bant/jsp/images/links_icon/pph.png",
@@ -129,7 +131,7 @@ const MemberDashboard = () => {
             <div></div>
           </div>
           <div className="edit_print">
-            <Button>
+            <Button onclick={() => router.push("/editmemberfaces")}>
               <Person2 />
               Edit Personal/Practice <br /> Details
             </Button>

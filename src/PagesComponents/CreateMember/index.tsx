@@ -11,10 +11,11 @@ import {
 import styles from "@/styles/Home.module.css";
 import LayoutWithLogin from "@/Layout";
 import CreateMemberSearchStyles from "./CreateMember.styles";
+import { useRouter } from "next/router";
 
 const CreateMemberComponent = () => {
   const [type, setType] = useState("associate");
-
+  const router = useRouter();
   const handleChange = (event: SelectChangeEvent) => {
     setType(event.target.value as string);
   };
@@ -36,9 +37,7 @@ const CreateMemberComponent = () => {
 
   return (
     <CreateMemberSearchStyles>
-      <Box className="dash">
-        Member Applications
-      </Box>
+      <Box className="dash">Member Applications</Box>
       <Box className="form-bg">
         <img src="/images/pattern.webp" className="bg-pattern" />
         <Box className="box-form">
@@ -68,7 +67,10 @@ const CreateMemberComponent = () => {
               <InputLabel>Last Name</InputLabel>
               <TextField className="form_Control" error={false} />
             </Box>
-            <Box className="form_Group">
+            <Box
+              className="form_Group"
+              onClick={() => router.push("/editmemberfaces")}
+            >
               <Button className="MuiButton-containedPrimary">Create</Button>
             </Box>
           </Box>
