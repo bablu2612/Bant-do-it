@@ -232,7 +232,7 @@ const MemberDashboard = () => {
               </tr>
             </table>
             </div>
-            <div className="box_class">
+            <div className="box_class Heading">
               <div>
                 <h4>
                   <InsertChart />

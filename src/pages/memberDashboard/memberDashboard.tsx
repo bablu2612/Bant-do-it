@@ -140,6 +140,8 @@ img {
             flex: 100%;
             justify-content: flex-end;
             gap: 10px;
+
+            list-style: none;
              li {
                 max-width: max-content;
                 width: 100%;
@@ -199,7 +201,16 @@ img {
     padding: 10px 20px;
     border-radius: 5px 5px 0 0;
 }
-
+.box_class {
+    width: 100%;
+    h4 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--purple);
+    font-size: 16px;
+}
+}
 `;
 
 export default MemberDashboardStyle;
