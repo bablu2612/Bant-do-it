@@ -129,10 +129,11 @@ button.MuiButton-containedPrimary {
     width: 100%;
     max-width: 150px;
     text-transform: capitalize;
+ 
     &:hover{
       color:  var(--orange);
     border: 2px solid  var(--orange);
-    background: transparent;
+    background-color: #fff;
     }
     &:hover:before,&:hover::after {
     width: 0;

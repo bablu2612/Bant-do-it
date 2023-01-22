@@ -245,7 +245,7 @@ const MemberDashboard = () => {
               </table>
             </div>
             <div className="box_class">
-              <div>
+              <div className="Heading">
                 <h4>
                   <InsertChart />
                   Recorded Analytics (since 14/11/2020)
@@ -254,46 +254,66 @@ const MemberDashboard = () => {
               <div>
                 <div className="table-reponsive">
                   <table>
+                    <thead>
+                      <tr>
+                        <th>
+                          <div className="form-group">
+                            <span>Filter by range</span>
+                            <select name="cars" id="cars">
+                              <option value="volvo">Volvo</option>
+                              <option value="saab">Saab</option>
+                              <option value="mercedes">Mercedes</option>
+                              <option value="audi">Audi</option>
+                            </select>
+                          </div>
+                        </th>
+                        <th>
+                          <div className="filter">
+                            <div className="form-group">
+                              <span>From date</span>
+                              <input
+                                type="date"
+                                id="birthday"
+                                name="birthday"
+                              />
+                            </div>
+                            <div className="form-group">
+                              <span>To date</span>
+                              <input
+                                type="date"
+                                id="birthday"
+                                name="birthday"
+                              />
+                            </div>
+
+                            <div className="form-group">
+                              <span>Filter by date</span>
+                              <input
+                                type="checkbox"
+                                id="datecheck"
+                                name="datecheck"
+                                value="true"
+                              />
+                            </div>
+                            <Button className="MuiButton-containedPrimary">
+                              Submit
+                            </Button>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
                     <tbody>
                       <tr>
-                        <th>
-                          <span>Filter by range</span>
-                          <select name="cars" id="cars">
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="mercedes">Mercedes</option>
-                            <option value="audi">Audi</option>
-                          </select>
-                        </th>
-                        <th>
-                          <div>
-                            <span>Filter by date</span>
-                            <input
-                              type="checkbox"
-                              id="datecheck"
-                              name="datecheck"
-                              value="true"
-                            />
-                          </div>
-                          <span>From date</span>
-                          <input type="date" id="birthday" name="birthday" />
-                          <span>To date</span>
-                          <input type="date" id="birthday" name="birthday" />
-                          <Button className="MuiButton-containedPrimary">
-                            Submit
-                          </Button>
-                        </th>
-                        <th></th>
-                      </tr>
-                      <tr>
                         <td colSpan={4}>
-                          Below are the statistics for the traffic you've
-                          received through the BANT website since 14/11/2020
+                          <p className="message">
+                            Below are the statistics for the traffic you've
+                            received through the BANT website since 14/11/2020
+                          </p>
                         </td>
                       </tr>
                       <tr>
-                        <td>
-                          <table>
+                        <td className="" colSpan={2}>
+                          <table class="table-reponsive">
                             <thead>
                               <tr>
                                 <th>Analytics Type</th>
