@@ -18,7 +18,7 @@ margin: 0;
 padding: 0;
 font-family: var(--common-font);
 box-sizing: border-box; 
-}
+} 
  a{
   text-decoration: none;
  }
