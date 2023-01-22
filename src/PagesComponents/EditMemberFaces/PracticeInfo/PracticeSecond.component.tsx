@@ -33,46 +33,55 @@ const PracticeSecondComponent: React.FC = () => {
             <PracticeInfoSecondStyle className='second_section_main'>
                 <Box component={'div'} className="checkbox_section">
                     {_.map(LEFT_SIDE, (row: string, index: number) => (
-                        <CheckBoxComponent
-                            label={row}
-                            name={`checkbox_first${index}`}
-                            defaultChecked={false}
-                            onChange={(event: React.ChangeEvent<HTMLInputElement>) => console.log(event)}
-                        />
+                        <Box component="div" key={row}>
+                            <CheckBoxComponent
+                                label={row}
+                                name={`checkbox_first${index}`}
+                                defaultChecked={false}
+                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => console.log(event)}
+                            />
+                        </Box>
                     ))}
+
                 </Box>
                 <Box component={'div'} className="checkbox_section">
                     {_.map(CENTER_ONE, (row: string, index: number) => (
-                        <CheckBoxComponent
-                            label={row}
-                            name={`checkbox_second${index}`}
-                            defaultChecked={false}
-                            onChange={(event: React.ChangeEvent<HTMLInputElement>) => console.log(event)}
-                        />
+                        <Box component="div" key={row}>
+                            <CheckBoxComponent
+                                label={row}
+                                name={`checkbox_second${index}`}
+                                defaultChecked={false}
+                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => console.log(event)}
+                            />
+                        </Box>
                     ))}
                 </Box>
                 <Box component={'div'} className="checkbox_section">
                     {_.map(CENTER_TWO, (row: string, index: number) => (
-                        <CheckBoxComponent
-                            label={row}
-                            name={`checkbox_third${index}`}
-                            defaultChecked={false}
-                            onChange={(event: React.ChangeEvent<HTMLInputElement>) => console.log(event)}
-                        />
+                        <Box component="div" key={row}>
+                            <CheckBoxComponent
+                                label={row}
+                                name={`checkbox_third${index}`}
+                                defaultChecked={false}
+                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => console.log(event)}
+                            />
+                        </Box>
                     ))}
                 </Box>
                 <Box component={'div'} className="checkbox_section">
                     {_.map(RIGHT_SIDE, (row: string, index: number) => (
-                        <CheckBoxComponent
-                            label={row}
-                            name={`checkbox_forth${index}`}
-                            defaultChecked={false}
-                            onChange={(event: React.ChangeEvent<HTMLInputElement>) => console.log(event)}
-                        />
+                        <Box component="div" key={row}>
+                            <CheckBoxComponent
+                                label={row}
+                                name={`checkbox_forth${index}`}
+                                defaultChecked={false}
+                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => console.log(event)}
+                            />
+                        </Box>
                     ))}
                 </Box>
             </PracticeInfoSecondStyle>
-        </EditMemberCommonLayout>
+        </EditMemberCommonLayout >
     );
 }
 export default PracticeSecondComponent;

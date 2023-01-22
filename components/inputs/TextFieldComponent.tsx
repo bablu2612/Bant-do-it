@@ -2,6 +2,7 @@ import { Box, InputLabel, TextField } from "@mui/material";
 import * as React from 'react'
 import styled from "styled-components";
 interface ITextField {
+    type?: ('text' | 'number');
     error?: boolean;
     errorText?: string | undefined | boolean;
     name: string;
@@ -13,6 +14,11 @@ interface ITextField {
 }
 
 const TextComponentStyle = styled.div`
+input[type=number]{ 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
         label {
             color: #000;
             font-size: 18px;
@@ -29,6 +35,7 @@ const TextComponentStyle = styled.div`
 `;
 
 const TextFieldComp: React.FC<ITextField> = ({
+    type,
     error,
     errorText,
     name,
@@ -43,14 +50,20 @@ const TextFieldComp: React.FC<ITextField> = ({
             <Box component="div" className={`${name}_form_control`} >
                 {label && <InputLabel htmlFor={id} error={!!error}>{label}</InputLabel>}
                 <TextField
+                    type={type}
                     className="form_Control input_field"
                     error={false}
                     {...{ id, name, readOnly, onChange, onBlur }}
+                    inputProps={
+                        type === "number" ? { inputMode: 'numeric', pattern: '[0-9]*' } : {}
+                    }
                     helperText={errorText}
                 />
             </Box>
         </TextComponentStyle >
     )
 }
-
+TextFieldComp.defaultProps = {
+    type: 'text'
+}
 export default TextFieldComp;

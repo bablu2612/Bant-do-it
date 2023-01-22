@@ -8,6 +8,7 @@ import PersonalInfoComponent from "@/PagesComponents/EditMemberFaces/PersonalInf
 import PracticeInfoComponent from "@/PagesComponents/EditMemberFaces/PracticeInfo";
 import QualificationInfoComponent from "@/PagesComponents/EditMemberFaces/QualificationInfo";
 import { Box } from "@mui/material";
+import ButtonComponent from "components/inputs/ButtonComponent";
 import TabComponent from "components/inputs/TabComponent";
 import { useState } from "react";
 
@@ -44,6 +45,11 @@ const EditMemberFaces: React.FC = () => {
                 <TabComponent tabslist={TabsListConstent} currentTab={currentTab} onTabChange={(value: string) => _handleTabChange(value)}>
                     {_currentComponent()}
                 </TabComponent>
+
+                <Box component={"div"} className="actions_buttons">
+                    <ButtonComponent type="submit" onClick={() => alert()}>Save</ButtonComponent>
+                    <ButtonComponent onClick={() => alert()}>Cancel</ButtonComponent>
+                </Box>
             </EditMemberFacesStyle>
         </LayoutWithLogin>
     );

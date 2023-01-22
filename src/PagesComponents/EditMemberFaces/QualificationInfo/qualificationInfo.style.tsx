@@ -19,7 +19,12 @@ const QualificationMainStyle = styled.div`
                 gap: 5px;
             }
             &.new_qualification {
-
+                width: 100%;
+                max-width: 200px;
+                padding: 12px 10px;
+                display: flex;
+                column-gap: 10px;
+                align-items: center;
             }
         }
         

@@ -10,12 +10,14 @@ const PracticeThirdComponent: React.FC = () => {
         <EditMemberCommonLayout heading='Areas of Special Interest (Please only tick the relevant boxes if you have received specific training in the relevant field post graduation to support your recommendations and ability to work with other healthcare professionals)'>
             <Box component={'div'} className="checkbox_section">
                 {_.map(CheckBoxField, (row: string, index: number) => (
-                    <CheckBoxComponent
-                        label={row}
-                        name={`checkbox${index}`}
-                        defaultChecked={false}
-                        onChange={(event: React.ChangeEvent<HTMLInputElement>) => console.log(event)}
-                    />
+                    <Box component={'div'} key={row}>
+                        <CheckBoxComponent
+                            label={row}
+                            name={`checkbox${index}`}
+                            defaultChecked={false}
+                            onChange={(event: React.ChangeEvent<HTMLInputElement>) => console.log(event)}
+                        />
+                    </Box>
                 ))}
             </Box>
         </EditMemberCommonLayout>

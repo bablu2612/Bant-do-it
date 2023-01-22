@@ -15,10 +15,10 @@ const PersonalInfoComponent: React.FC = () => {
             <PersonalSecondComponent />
             <PersonalThirdComponent />
             <PersonalFourthComponent />
-            <Box component={"div"} className="actions_buttons">
+            {/* <Box component={"div"} className="actions_buttons">
                 <ButtonComponent type="submit" onClick={() => alert()}>Save</ButtonComponent>
                 <ButtonComponent onClick={() => alert()}>Cancel</ButtonComponent>
-            </Box>
+            </Box> */}
         </PersonalInfoStyleMain>
     );
 }

@@ -39,10 +39,6 @@ const QualificationInfoComponent: React.FC = () => {
                 </QualificationMainStyle>
 
             </EditMemberCommonLayout>
-            <Box component={"div"} className="actions_buttons">
-                <ButtonComponent type="submit" onClick={() => alert()}>Save</ButtonComponent>
-                <ButtonComponent onClick={() => alert()}>Cancel</ButtonComponent>
-            </Box>
         </>
 
     );

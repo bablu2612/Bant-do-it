@@ -26,6 +26,12 @@ const EditMemberFacesStyle = styled.div`
             padding: 20px;
             border: 1px solid var(--purple);
         }
+        a {
+            color: var(--purple);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
     .actions_buttons {
         display: flex;
@@ -35,6 +41,7 @@ const EditMemberFacesStyle = styled.div`
         gap: 20px;
 
         button {
+            margin: 0;
             padding: 15px;
             font-size: 16px;
             font-weight: 600;
