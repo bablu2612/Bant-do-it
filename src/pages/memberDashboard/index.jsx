@@ -15,6 +15,7 @@ import {
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { Box } from "@mui/system";
+import LayoutWithLogin from "@/Layout";
 
 const MemberDashboard = () => {
   const router = useRouter();
@@ -71,7 +72,7 @@ const MemberDashboard = () => {
     },
   ];
   return (
-    <>
+    <LayoutWithLogin>
       <MemberDashboardStyle>
         <Box component="main" id="wrapper">
           <div className="memberMain">
@@ -223,22 +224,24 @@ const MemberDashboard = () => {
                     <th>Completed</th>
                   </tr>
                 </thead>
-                <tr>
-                  <td>Active</td>
-                  <td>0.0</td>
-                </tr>
-                <tr>
-                  <td>Self-directed</td>
-                  <td>0.0</td>
-                </tr>
-                <tr>
-                  <td>Promoting the Profession</td>
-                  <td>0.0</td>
-                </tr>
-                <tr>
-                  <td>Total (0.0 remaining)</td>
-                  <td>0.0</td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td>Active</td>
+                    <td>0.0</td>
+                  </tr>
+                  <tr>
+                    <td>Self-directed</td>
+                    <td>0.0</td>
+                  </tr>
+                  <tr>
+                    <td>Promoting the Profession</td>
+                    <td>0.0</td>
+                  </tr>
+                  <tr>
+                    <td>Total (0.0 remaining)</td>
+                    <td>0.0</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
             <div className="box_class">
@@ -273,17 +276,9 @@ const MemberDashboard = () => {
                             />
                           </div>
                           <span>From date</span>
-                          <input
-                            type="date"
-                            id="birthday"
-                            name="birthday"
-                          ></input>
+                          <input type="date" id="birthday" name="birthday" />
                           <span>To date</span>
-                          <input
-                            type="date"
-                            id="birthday"
-                            name="birthday"
-                          ></input>
+                          <input type="date" id="birthday" name="birthday" />
                           <Button className="MuiButton-containedPrimary">
                             Submit
                           </Button>
@@ -300,8 +295,10 @@ const MemberDashboard = () => {
                         <td>
                           <table>
                             <thead>
-                              <th>Analytics Type</th>
-                              <th>Hits</th>
+                              <tr>
+                                <th>Analytics Type</th>
+                                <th>Hits</th>
+                              </tr>
                             </thead>
                             <tbody>
                               <tr>
@@ -328,7 +325,7 @@ const MemberDashboard = () => {
           </div>
         </Box>
       </MemberDashboardStyle>
-    </>
+    </LayoutWithLogin>
   );
 };
 
