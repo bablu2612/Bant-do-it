@@ -86,9 +86,9 @@ const CpdAndConferencesComponent = () => {
           <Box className="main_api_data_part">
             <div className="Heading">Blog</div>
             <Box className="Blog">
-              <Box className="first_section img">
+              {/* <Box className="first_section img">
                 <img src="/images/logo.png" />
-              </Box>
+              </Box> */}
               <Box className="secound_section">
                 <h3>Amanda Swaine DipION, BANT, CNHC</h3>
                 <p>
@@ -152,9 +152,9 @@ const CpdAndConferencesComponent = () => {
             </Box>
             :
             <Box className="main_api_data_part">
-              <Box className="first_section img">
+              {/* <Box className="first_section img">
                 <img src="/images/logo.png" />
-              </Box>
+              </Box> */}
             </Box>
           </Box>
         </>
