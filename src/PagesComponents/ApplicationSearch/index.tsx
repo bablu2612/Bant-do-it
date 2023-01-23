@@ -7,7 +7,6 @@ import {
   Select,
   SelectChangeEvent,
 } from "@mui/material";
-import styles from "@/styles/Home.module.css";
 import ApplicationSearchStyles from "./Application.style";
 import { applicationStatus, applicationType } from "./Application.constant";
 import ApplicationTable from "./ApplicationTable";
@@ -28,9 +27,7 @@ const ApplicationSearchComponent = () => {
     <ApplicationSearchStyles>
       {applictionearch ? (
         <Box>
-          <Box className="dash">
-            View Applications
-          </Box>
+          <Box className="dash">View Applications</Box>
           <Box className="form-bg">
             <img src="/Images/pattern.webp" className="bg-pattern" />
             <Box className="box-form">
