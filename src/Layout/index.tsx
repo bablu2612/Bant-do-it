@@ -12,12 +12,12 @@ const LayoutWithLogin = ({ children }: props) => {
 
   return (
     <Box className={`main_components ${isactive ? "active" : "not-active"}`}>
-      {/* <Header setIsActive={setIsActive} /> */}
+      <Header setIsActive={setIsActive} />
       <SideBar />
       <Box component="main" id="wrapper">
         {children}
       </Box>
-      {/* <Footer /> */}
+      <Footer />
     </Box>
   );
 };
